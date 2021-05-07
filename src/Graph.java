@@ -3,11 +3,8 @@ import java.util.List;
 public class Graph {
     // data members, the graph provided as a 2d array
     protected int[][] graph;
-//    protected List<List<Integer>> result;
     // constructor
-    public Graph(int[][] graph){
-        this.graph = graph;
-    }
+    public Graph(int[][] graph){ this.graph = graph; }
     private void allPaths(int[][] graph, int node, List<Integer> current, List<List<Integer>> result) {
         if (node == graph.length-1){
             // add a new arraylist to the results list
@@ -28,6 +25,7 @@ public class Graph {
         if (graph.length==0||graph[0].length==0) {
             System.out.println("Graph is either empty, or was not instantiated correctly.");
         }
+        // using these data structures instead of the int[][] function signature
         List<Integer> current = new ArrayList<>();
         List<List<Integer>> result = new ArrayList<>();
         // always start at 0
